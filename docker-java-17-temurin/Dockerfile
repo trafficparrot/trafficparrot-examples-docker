@@ -1,0 +1,12 @@
+FROM eclipse-temurin:17-jre
+
+RUN apt-get update && apt-get install unzip -y
+
+WORKDIR /opt
+COPY trafficparrot-*.zip trafficparrot.zip
+RUN unzip trafficparrot.zip && rm trafficparrot.zip && mv trafficparrot-* trafficparrot
+
+RUN chgrp -R 0 /opt/trafficparrot && chmod -R g=u /opt/trafficparrot
+
+WORKDIR /opt/trafficparrot
+CMD ["./start-foreground.sh"]
