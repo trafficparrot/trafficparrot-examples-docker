@@ -79,7 +79,37 @@ CMD exec ./start-foreground.sh trafficparrot.gui.http.port=$GUI_HTTP_PORT
 
 ## Logging Configuration
 
-Logging levels can be set dynamically via environment variables with support for log4j, log4j2, and logback configurations.
+Logging levels can be set dynamically via environment variables with support for log4j, log4j2, and logback configurations:
+
+```dockerfile
+# Set logging level via environment variable
+ENV LOG_LEVEL=ERROR
+
+# Configure start command to use the environment variable
+CMD exec ./start-foreground.sh -DLOG_LEVEL=$LOG_LEVEL
+```
+
+Depending on your logging configuration file:
+
+- For **log4j.properties**:
+  ```
+  log4j.rootLogger=${LOG_LEVEL},file,stdout
+  ```
+
+- For **log4j2.xml**:
+  ```xml
+  <Root level="${env:LOG_LEVEL}">
+  ```
+
+- For **logback.xml**:
+  ```xml
+  <root level="${LOG_LEVEL}">
+  ```
+
+When running the container, specify the logging level:
+```bash
+docker run -p 8080:8080 -e LOG_LEVEL=DEBUG trafficparrot
+```
 
 ## License
 
