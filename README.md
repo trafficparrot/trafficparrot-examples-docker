@@ -6,7 +6,7 @@ For more information, see the [Traffic Parrot Docker documentation](https://traf
 
 ## Available Examples
 
-- [docker-java-17-temurin](docker-java-17-temurin) - Traffic Parrot with Eclipse Temurin OpenJDK 17 LTS
+- [docker-java-17-temurin](docker-java-17-temurin) - Traffic Parrot with Eclipse Temurin OpenJDK 17
 - [docker-java-17-alpine](docker-java-17-alpine) - Traffic Parrot with Alpine Linux and OpenJDK 17
 - [docker-java-21-temurin](docker-java-21-temurin) - Traffic Parrot with Eclipse Temurin OpenJDK 21 LTS
 - [docker-java-21-alpine](docker-java-21-alpine) - Traffic Parrot with Alpine Linux and OpenJDK 21 LTS

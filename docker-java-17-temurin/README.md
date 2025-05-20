@@ -1,6 +1,6 @@
-# Traffic Parrot with Eclipse Temurin OpenJDK 17 LTS
+# Traffic Parrot with Eclipse Temurin OpenJDK 17
 
-This example uses the Eclipse Temurin OpenJDK 17 LTS JRE as the base image for running Traffic Parrot.
+This example uses the Eclipse Temurin OpenJDK 17 JRE as the base image for running Traffic Parrot.
 
 ## Base Image
 
@@ -10,7 +10,7 @@ eclipse-temurin:17-jre
 
 ## Features
 
-- Uses official Eclipse Temurin OpenJDK 17 LTS JRE image
+- Uses official Eclipse Temurin OpenJDK 17 JRE image
 - Includes unzip for extracting the Traffic Parrot distribution
 - Sets appropriate permissions for running in containerized environments
 - Uses start-foreground.sh script for proper process management
